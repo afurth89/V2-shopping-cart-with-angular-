@@ -9,11 +9,21 @@
         templateUrl: '../partials/shopping/layout.html'
       }
     })
-})();
+})();  // MUST PUT A SEMICOLON HERE (or error is produced because IIFE's are not differentiated and tried to run together)
 
 //***************************************************************************
 //CHECKOUT - PARENT
 //***************************************************************************
+(function() {
+  angular
+    .module('shoppingCartApp')
+    .directive('checkoutParent', function() {
+      return {
+        templateUrl: '../partials/checkout/layout.html'
+      }
+    })
+})();
+
 
 //***************************************************************************
 //HEADER (exists within both Shopping and Checkout)
@@ -55,3 +65,22 @@
 //***************************************************************************
 //CHECKOUT
 //***************************************************************************
+(function() {
+  angular
+    .module('shoppingCartApp')
+    .directive('cartTotal', function() {
+      return {
+        templateUrl: '../partials/checkout/total.html'
+      }
+    })
+})();
+
+(function() {
+  angular
+    .module('shoppingCartApp')
+    .directive('cartList', function() {
+      return {
+        templateUrl: '../partials/checkout/list.html'
+      }
+    })
+})();
