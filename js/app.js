@@ -8,10 +8,10 @@
     function config($routeProvider, $locationProvider) {
       $routeProvider
         .when('/shopping', {
-          templateUrl: '../templates/shopping.html'
+          templateUrl: '../views/shopping.html'
         })
         .when('/checkout', {
-          templateUrl: '../templates/checkout.html'
+          templateUrl: '../views/checkout.html'
         })
         .otherwise({redirectTo: '/shopping'})
       $locationProvider.html5Mode(true);
